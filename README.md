@@ -4,12 +4,6 @@ PyGmailCleaner is a command-line interface (CLI) application designed to help yo
 
 ## Features
 
-- **Filter Emails**: Apply various filters to identify emails to be cleaned.
-- **Analyze Inbox**: Retrieve general statistics about your inbox, such as the total number of messages and unread messages.
-- **Delete Emails**: Optionally delete emails immediately or after confirmation.
-- **User-Friendly Prompts**: Interactive prompts guide you through the cleaning process.
-- **Logging**: Configurable logging to track the application's actions and any issues that may arise.
-
 ## Prerequisites
 
 - Python 3.x
@@ -21,7 +15,7 @@ PyGmailCleaner is a command-line interface (CLI) application designed to help yo
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/PyGmailCleaner.git
+   git clone https://github.com/rarup1/PyGmailCleaner.git
    cd PyGmailCleaner
    ```
 
