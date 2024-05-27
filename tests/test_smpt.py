@@ -1,6 +1,6 @@
 import os
 import sys
-import pytest
+import pytest # type: ignore
 from unittest.mock import Mock, patch
 
 sys.path.append("./")

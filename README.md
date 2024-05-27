@@ -1,8 +1,12 @@
 # PyGmailCleaner
 
-PyGmailCleaner is a command-line interface (CLI) application designed to help you manage and clean up your Gmail inbox efficiently. It provides simple options to filter emails by
+PyGmailCleaner is a command-line interface (CLI) application designed to help you manage and clean up your Gmail inbox efficiently. It provides simple options to filter emails by various criteria and automate the deletion process.
 
 ## Features
+
+- Filter emails by date, promotions, unread status, importance, and attachments.
+- Interactive prompts for easy configuration.
+- Option to delete emails immediately or after confirmation.
 
 ## Prerequisites
 
@@ -13,28 +17,37 @@ PyGmailCleaner is a command-line interface (CLI) application designed to help yo
 
 ## Installation
 
-1. **Clone the repository**:
+PyGmailCleaner can be installed using Poetry or pip from PyPI.
+
+### Using Poetry
+
+1. **Install Poetry** (if not already installed):
    ```bash
-   git clone https://github.com/rarup1/PyGmailCleaner.git
-   cd PyGmailCleaner
+   curl -sSL https://install.python-poetry.org | python3 -
    ```
 
-2. **Install required dependencies**:
+2. **Add PyGmailCleaner**:
    ```bash
-   pip install -r requirements.txt
+   poetry add pygmailcleaner
    ```
 
-3. **Set environment variables** (optional):
+3. **Install dependencies**:
    ```bash
-   export GMAIL_USER="your-email@gmail.com"
-   export GMAIL_PASSWORD="your-password"
+   poetry install
+   ```
+
+### Using pip from PyPI
+
+1. **Install PyGmailCleaner**:
+   ```bash
+   pip install pygmailcleaner
    ```
 
 ## Usage
 
 Run the application using the following command:
 ```bash
-python pygmailcleaner.py --loglevel debug
+pygmailcleaner --loglevel debug
 ```
 
 ### Command-Line Arguments
@@ -45,12 +58,18 @@ python pygmailcleaner.py --loglevel debug
 
 The application will guide you through several prompts to configure the cleaning process:
 
-1. **Email Credentials**: Enter your Gmail address and password if not set via environment variables.
+1. **Email Credentials**: Enter your Gmail address and password if not set via environment variables. The password expected is an "app password" if your gmail uses two-factor which can be configured via: https://support.google.com/mail/answer/185833?hl=en-GB. 
+
 2. **General Statistics**: The application will display the total number of messages and unread messages.
+
 3. **Filter Date**: Specify a date to filter emails up until.
+
 4. **Filter Selection**: Choose the filters to apply for identifying emails to be cleaned.
+
 5. **Delete Immediately**: Choose whether to delete emails immediately or wait for confirmation.
+
 6. **Summary**: Review your choices and confirm to proceed.
+ 
 7. **Continue Confirmation**: Confirm whether to proceed with the deletion.
 
 ### Example Run
@@ -89,12 +108,25 @@ Moving 259 to Trash
 Emptying Trash
 Connection closed
 Thank you for using the Gmail Cleaner CLI. Goodbye!
-
 ```
 
 ## Logging
 
 Logs are printed to the console based on the specified log level. Available levels are `debug`, `info`, `warning`, `error`, and `notset`.
+
+## Next steps
+
+- Break the app into commands:
+   - Delete by filters worflow (current)
+   - Delete by top spammers workflow
+   - Delete by specific email address
+   - Delete by specific subject title
+
+- Add more information to messages staged for deletion
+
+What this app will not do:
+   - Unsubscribe 
+
 
 ## Contributing
 

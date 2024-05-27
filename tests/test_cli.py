@@ -1,6 +1,6 @@
-import pytest
 from unittest.mock import patch
 import sys
+import pytest # type: ignore
 
 sys.path.append("./")
 from pygmailcleaner.utils import YesNoQuestionHandler, DateQuestionHandler

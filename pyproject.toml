@@ -14,7 +14,7 @@ pygmailcleaner = "pygmailcleaner.main:main"
 python = "^3.9"
 colorama = "^0.4.6"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
 
 [build-system]
