@@ -138,6 +138,6 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any questions or issues, please contact [your-email@gmail.com].
+For any questions or issues, please contact [ruperarup@gmail.com].
 
 Thank you for using PyGmailCleaner!
