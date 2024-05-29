@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pygmailcleaner"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tool to clear out your gmail inbox"
 authors = ["Rupert Arup <rupertarup@gmail.com>"]
 packages = [{include = "pygmailcleaner"}]
