@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - main
-      
+
 jobs:
   release:
     runs-on: ubuntu-latest
+    environment: PROD
     steps:
       - uses: actions/checkout@v4
       - name: Install python
