@@ -1,9 +1,12 @@
-name: Unit tests
+name: Publish to PyPI
 
-on: [push, pull_request]
-
+on:
+  push:
+    branches:
+      - main
+      
 jobs:
-  ci:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,5 +27,13 @@ jobs:
           key: venv-${{ hashFiles('poetry.lock') }}
       - name: Install dependencies
         run: poetry install
-      - name: Run pytest
-        run: poetry run pytest -v
+
+      - name: Build package
+        run: |
+          poetry build
+
+      - name: Publish to PyPI
+        env:
+          POETRY_PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+        run: |
+          poetry publish --username __token__ --password $POETRY_PYPI_TOKEN
